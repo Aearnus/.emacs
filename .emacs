@@ -15,6 +15,7 @@
 (package-initialize)
 
 ;; INSTALL ALL MY PACKAGES
+(package-refresh-contents)
 (mapc 'package-install '(all-the-icons-dired
 			 all-the-icons
 			 intero
@@ -49,14 +50,12 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (northcode)))
+ '(custom-enabled-themes '(northcode))
  '(custom-safe-themes
-   (quote
-    ("10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "565aa482e486e2bdb9c3cf5bfb14d1a07c4a42cfc0dc9d6a14069e53b6435b56" default)))
+   '("10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "565aa482e486e2bdb9c3cf5bfb14d1a07c4a42cfc0dc9d6a14069e53b6435b56" default))
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   (quote
-    (sublimity slime epl pkg-info deferred concurrent ctable epc commenter dash flycheck flycheck-nimsuggest neotree memoize package-install smooth-scroll intero lsp-haskell yaml-mode haskell-mode northcode-theme klere-theme powerline all-the-icons-dired all-the-icons dired-sidebar nim-mode)))
+   '(sublimity slime epl pkg-info deferred concurrent ctable epc commenter dash flycheck flycheck-nimsuggest neotree memoize package-install smooth-scroll intero lsp-haskell yaml-mode haskell-mode northcode-theme klere-theme powerline all-the-icons-dired all-the-icons dired-sidebar nim-mode))
  '(smooth-scroll/hscroll-step-size 1)
  '(smooth-scroll/vscroll-step-size 1))
 
@@ -121,4 +120,3 @@ there's a region, all lines that region covers will be duplicated."
 				   (transpose-lines 1)
 				   (previous-line 1)
 				   (funcall indent-line-function)))
-
