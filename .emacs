@@ -54,6 +54,7 @@
  '(custom-safe-themes
    '("10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "565aa482e486e2bdb9c3cf5bfb14d1a07c4a42cfc0dc9d6a14069e53b6435b56" default))
  '(inhibit-startup-screen t)
+ '(mouse-wheel-progressive-speed nil)
  '(package-selected-packages
    '(sublimity slime epl pkg-info deferred concurrent ctable epc commenter dash flycheck flycheck-nimsuggest neotree memoize package-install smooth-scroll intero lsp-haskell yaml-mode haskell-mode northcode-theme klere-theme powerline all-the-icons-dired all-the-icons dired-sidebar nim-mode))
  '(smooth-scroll/hscroll-step-size 1)
@@ -64,7 +65,27 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#1c1c1c" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "PfEd" :family "Fira Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "#1c1c1c" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 113 :width normal :foundry "DAMA" :family "Ubuntu Mono"))))
+ '(neo-banner-face ((t (:foreground "lightblue" :weight bold :family "Ubuntu"))))
+ '(neo-button-face ((t (:underline nil :family "Ubuntu"))))
+ '(neo-dir-link-face ((t (:foreground "DeepSkyBlue" :family "Ubuntu"))))
+ '(neo-expand-btn-face ((t (:foreground "SkyBlue" :family "Ubuntu"))))
+ '(neo-file-link-face ((t (:foreground "White" :family "Ubuntu"))))
+ '(neo-header-face ((t (:foreground "White" :family "Ubuntu"))))
+ '(neo-root-dir-face ((t (:foreground "lightblue" :weight bold :family "Ubuntu"))))
+ '(neo-vc-added-face ((t (:foreground "LightGreen" :family "Ubuntu"))))
+ '(neo-vc-conflict-face ((t (:foreground "Red1" :family "Ubuntu"))))
+ '(neo-vc-default-face ((t (:foreground "White" :family "Ubuntu"))))
+ '(neo-vc-edited-face ((t (:foreground "Magenta" :family "Ubuntu"))))
+ '(neo-vc-ignored-face ((t (:foreground "DarkGrey" :family "Ubuntu"))))
+ '(neo-vc-missing-face ((t (:foreground "Red1" :family "Ubuntu"))))
+ '(neo-vc-needs-merge-face ((t (:foreground "Red1" :family "Ubuntu"))))
+ '(neo-vc-needs-update-face ((t (:underline t :family "Ubuntu"))))
+ '(neo-vc-removed-face ((t (:strike-through t :family "Ubuntu"))))
+ '(neo-vc-unlocked-changes-face ((t (:background "Blue" :foreground "Red" :family "Ubuntu"))))
+ '(neo-vc-unregistered-face ((t (:family "Ubuntu"))) t)
+ '(neo-vc-up-to-date-face ((t (:foreground "LightGray" :family "Ubuntu"))))
+ '(neo-vc-user-face ((t (:foreground "Red" :slant italic :family "Ubuntu")))))
 
 ;; BEGIN MY CUSTOM CONFIG
 
@@ -73,8 +94,7 @@
 
 ;;(defun hello-world () (print "Hello from ELisp from Lua!"))
 
-(require 'smooth-scroll)
-(smooth-scroll-mode 1)
+(menu-bar-mode 1)
 
 (bar-cursor-mode 1)
 
@@ -120,3 +140,4 @@ there's a region, all lines that region covers will be duplicated."
 				   (transpose-lines 1)
 				   (previous-line 1)
 				   (funcall indent-line-function)))
+
